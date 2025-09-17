@@ -5,7 +5,8 @@ import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
-
+@Entity
+@Table(name = "Shipment")
 public class Shipment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO,generator = "UUID")
@@ -22,4 +23,30 @@ public class Shipment {
     )
     private Set<Product> product = new HashSet<>();
 
+    //getter and setters
+
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Set<Product> getProduct() {
+        return product;
+    }
+
+    public void setProduct(Set<Product> product) {
+        this.product = product;
+    }
 }
