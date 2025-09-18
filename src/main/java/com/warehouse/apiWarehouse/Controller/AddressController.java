@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/Address")
+@RequestMapping("/api/address")
 public class AddressController {
     @Autowired
     private AddressService service;
@@ -19,6 +19,7 @@ public class AddressController {
     public AddressDTO findById(@PathVariable ("id")UUID id) {
       return  service.findById(id);
     }
+
     @GetMapping
     public List<AddressDTO> findAll() {
         return service.findAll();
@@ -27,6 +28,7 @@ public class AddressController {
     public AddressDTO save(@RequestBody AddressDTO addressDTO) {
         return service.save(addressDTO);
     }
+
     @PutMapping("/{id}")
     public AddressDTO update(@PathVariable ("id")UUID id, @RequestBody AddressDTO addressDTO) {
         return service.update(id, addressDTO);

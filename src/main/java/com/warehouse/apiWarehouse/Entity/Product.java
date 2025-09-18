@@ -11,7 +11,6 @@ import java.util.UUID;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO,generator = "UUID")
-    @Column(nullable = false,updatable = false)
     private UUID id;
     @Column(nullable = false)
     private String sku;

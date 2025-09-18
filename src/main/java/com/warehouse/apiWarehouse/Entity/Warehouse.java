@@ -10,13 +10,12 @@ import java.util.UUID;
 public class Warehouse {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO,generator = "UUID")
+    private UUID id;
 
 
     @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false,updatable = false)
-    private UUID id;
 
 
     @OneToOne(cascade = CascadeType.ALL)

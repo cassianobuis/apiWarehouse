@@ -8,8 +8,6 @@ import java.util.UUID;
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO,generator = "UUID")
-
-    @Column(nullable = false)
     private UUID id;
     @Column(nullable = false)
     private String street;
@@ -21,6 +19,32 @@ public class Address {
     @OneToOne(mappedBy = "address")
     private Warehouse warehouse;
 
-    public void setId(UUID id) {
+    public String getStreet() {
+        return street;
     }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public Warehouse getWarehouse() {
+        return warehouse;
+    }
+
+    public void setWarehouse(Warehouse warehouse) {
+        this.warehouse = warehouse;
+    }
+
+    public void setId(UUID id) {
+
+    }
+
 }

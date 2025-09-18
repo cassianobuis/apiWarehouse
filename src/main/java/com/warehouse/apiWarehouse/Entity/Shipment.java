@@ -10,8 +10,6 @@ import java.util.UUID;
 public class Shipment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO,generator = "UUID")
-
-    @Column(nullable=false,updatable=false)
     private UUID id;
     @Column(nullable=false,updatable=false)
     private String status;

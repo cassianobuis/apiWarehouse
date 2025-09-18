@@ -48,17 +48,17 @@ public class AddressService {
     }
 
 
-    private AddressDTO convertToDto(Address address1) {
+    private AddressDTO convertToDto(Address address) {
         AddressDTO addressDTO = new AddressDTO();
-        addressDTO.setCity(addressDTO.getCity());
-        addressDTO.setStreet(addressDTO.getStreet());
+        addressDTO.setCity(address.getCity());
+        addressDTO.setStreet(address.getStreet());
         return addressDTO;
     }
 
     private Address convertToEntity(AddressDTO addressDTO) {
         Address address = new Address();
-        addressDTO.setCity(addressDTO.getCity());
-        addressDTO.setStreet(addressDTO.getStreet());
+        address.setCity(addressDTO.getCity());
+        address.setStreet(addressDTO.getStreet());
         return address;
 
     }
